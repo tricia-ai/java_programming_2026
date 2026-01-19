@@ -6,6 +6,7 @@ public class Assessment1_Tricia {
         /* --------------------------------------------------------
                                   Variable Operations
         -----------------------------------------------------------*/
+
         System.out.println("========================= Variable Operations =========================");
         int a = 15;
         int b = 4;
