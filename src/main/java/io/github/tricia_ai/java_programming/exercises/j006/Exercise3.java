@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Exercise3 {
     //made it a class variable to make it accessible to all classes
-    static int[] scores;
+    public static int[] scores;
     public static void main(String[] args) {
         scores = studentGrades(5);
         printGradeReport();
