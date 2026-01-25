@@ -8,7 +8,7 @@ public class Assessment2_Tricia {
         * Class Design and Encapsulation
         *
         * */
-        System.out.println("============================ Class Design and Encapsulation ============================");
+        System.out.println("/////////////////////// Class Design and Encapsulation ///////////////////////");
         Book book1 = new Book("I Am Pilgrim","Terry Hayes","ISB0978234939",200,true);
         System.out.println(book1);
         book1.borrowBook();
@@ -21,6 +21,7 @@ public class Assessment2_Tricia {
          *
          * */
         System.out.println("============================ Inheritance Hierarchy ============================");
+        System.out.println();
         Employee emp1 = new Employee("Stacey Mwikali","HRSM98", 200000);
         System.out.println(emp1.displayInfo());
 
@@ -47,22 +48,24 @@ public class Assessment2_Tricia {
          *
          * */
         System.out.println();
-        System.out.println("============================ Inheritance Bank Account============================");
         BankAccount bank1 = new BankAccount("224564065", "Stacey", 90000);
+        bank1.displayInfo();
         bank1.deposit(200000);
         bank1.withdraw(500);
-        bank1.displayInfo();
+
 
         System.out.println();
-        System.out.println("============================ Inheritance Savings Account============================");
+        System.out.println("============================ Savings Account ============================");
         SavingsAccount savings1 = new SavingsAccount("224564070", "Joshua", 90000, 20000);
+        savings1.displayInfo();
         System.out.println(savings1.withdraw(2000));
         System.out.println(savings1.savingsInterest(10));
-        savings1.displayInfo();
+
 
         System.out.println();
         System.out.println("============================ Inheritance Checking Account============================");
-        CheckingAccount check1 = new CheckingAccount("224564068", "Joel", 90000);
+        CheckingAccount check1 = new CheckingAccount("224464068", "Joel", 90000);
+        check1.displayInfo();
         check1.deposit(250000);
 
 

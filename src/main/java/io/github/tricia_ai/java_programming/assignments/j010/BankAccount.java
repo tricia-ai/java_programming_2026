@@ -6,34 +6,46 @@ public class BankAccount {
     protected int balance;
 
     public BankAccount(String accountNumber, String accountHolder, int balance){
-        setAccountNumber(accountNumber);
-        setAccountHolder(accountHolder);
-        setBalance(balance);
-    }
-
-    public void setAccountNumber(String accountNumber) {
-        if (accountNumber == null){
+        if (accountNumber.matches("224564\\d+")){
             this.accountNumber = accountNumber;
         } else {
-            this.accountNumber = null;
+            this.accountNumber = "Not Valid";
         }
-    }
-
-    public void setAccountHolder(String accountHolder) {
-        if (accountHolder == null){
+        if (accountHolder != null){
             this.accountHolder = accountHolder;
         } else {
             this.accountHolder = null;
         }
-    }
-
-    public void setBalance(int balance) {
         if (balance >= 0){
             this.balance = balance;
         } else {
             this.balance = 0;
         }
     }
+
+//    public void setAccountHolder(String accountHolder) {
+//        if (accountHolder == null){
+//            this.accountHolder = accountHolder;
+//        } else {
+//            this.accountHolder = null;
+//        }
+//    }
+//
+//    public void setAccountNumber(String accountNumber) {
+//        if (accountNumber.matches("224564\\d+")){
+//            this.accountNumber = accountNumber;
+//        } else {
+//            this.accountNumber = null;
+//        }
+//    }
+//
+//    public void setBalance(int balance) {
+//        if (balance >= 0){
+//            this.balance = balance;
+//        } else {
+//            this.balance = 0;
+//        }
+//    }
 
     public String getAccountNumber() {
 
@@ -71,9 +83,10 @@ public class BankAccount {
 
     }
     public void displayInfo(){
-        System.out.println("============================ Account Information ============================");
-        System.out.println("Account Number: "+accountNumber+" Account Holder: "
-        +accountNumber+ " Account Balance: "+balance);
+        System.out.println("/////////////////////////////// Account Information ////////////////////////////////");
+        System.out.println();
+        System.out.println("Account Number: "+getAccountNumber()+" Account Holder: "
+        +getAccountHolder()+ " Account Balance: "+getBalance());
 
     }
 
