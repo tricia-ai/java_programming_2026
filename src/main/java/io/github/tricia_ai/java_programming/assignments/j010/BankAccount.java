@@ -3,7 +3,7 @@ package io.github.tricia_ai.java_programming.assignments.j010;
 public class BankAccount {
     private String accountNumber;
     private String accountHolder;
-    private int balance;
+    protected int balance;
 
     public BankAccount(String accountNumber, String accountHolder, int balance){
         setAccountNumber(accountNumber);
@@ -51,6 +51,7 @@ public class BankAccount {
     public int deposit(int amount){
         if (amount > 0){
             balance = getBalance() + amount;
+            System.out.println("The new balance after depositing "+amount+" is: "+balance);
             return balance;
         } else {
             System.out.println("The amount is less than 0");
@@ -61,11 +62,18 @@ public class BankAccount {
     public int withdraw(int amount){
         if (amount < getBalance()){
             balance = getBalance() - amount;
+            System.out.println("The new balance after withdrawing "+amount+" is: "+balance);
             return balance;
         } else {
             System.out.println("Your balance is low");
             return 0;
         }
+
+    }
+    public void displayInfo(){
+        System.out.println("============================ Account Information ============================");
+        System.out.println("Account Number: "+accountNumber+" Account Holder: "
+        +accountNumber+ " Account Balance: "+balance);
 
     }
 
