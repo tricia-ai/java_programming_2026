@@ -1,7 +1,4 @@
 package io.github.tricia_ai.java_programming.assignments.j010;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Book {
