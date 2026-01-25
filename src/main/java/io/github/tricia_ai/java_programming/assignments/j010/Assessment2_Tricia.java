@@ -2,10 +2,23 @@ package io.github.tricia_ai.java_programming.assignments.j010;
 
 public class Assessment2_Tricia {
     public static void main(String[] args) {
+        /*
+        *
+        *
+        * Class Design and Encapsulation
+        *
+        * */
         Book book1 = new Book("I Am Pilgrim","Terry Hayes","ISB0978234939",200,true);
         System.out.println(book1);
         book1.borrowBook();
         book1.returnBook();
+
+        /*
+         *
+         *
+         *  Inheritance Hierarchy
+         *
+         * */
 
         Employee emp1 = new Employee("Stacey Mwikali","HRSM98", 200000);
         System.out.println(emp1.displayInfo());
@@ -15,6 +28,20 @@ public class Assessment2_Tricia {
 
         Developer dev1 = new Developer("Tricia Nyoike","DVTN01", 250000);
         System.out.println(dev1.displayInfo());
+
+        /*
+         *
+         *
+         *  Method Overloading and Overriding
+         *
+         * */
+        Calculator calc = new Calculator();
+        ScientificCalculator scif = new ScientificCalculator();
+
+
+
+
+
 
         /*
         * Quiz Problem 5: Conceptual Questions

@@ -34,11 +34,9 @@ public class BankAccount {
             this.balance = 0;
         }
     }
-    public int getBalance(){
-        return balance;
-    }
 
     public String getAccountNumber() {
+
         return accountNumber;
     }
 
@@ -46,12 +44,28 @@ public class BankAccount {
         return accountHolder;
     }
 
+    public int getBalance(){
+        return balance;
+    }
+
     public int deposit(int amount){
-        return getBalance() + amount;
+        if (amount > 0){
+            balance = getBalance() + amount;
+            return balance;
+        } else {
+            System.out.println("The amount is less than 0");
+            return 0;
+        }
     }
 
     public int withdraw(int amount){
-        return getBalance() - amount;
+        if (amount < getBalance()){
+            balance = getBalance() - amount;
+            return balance;
+        } else {
+            System.out.println("Your balance is low");
+            return 0;
+        }
 
     }
 
