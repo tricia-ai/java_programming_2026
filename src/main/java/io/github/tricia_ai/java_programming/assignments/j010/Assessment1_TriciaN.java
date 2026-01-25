@@ -1,6 +1,6 @@
 package io.github.tricia_ai.java_programming.assignments.j010;
 
-public class Assessment1_Tricia {
+public class Assessment1_TriciaN {
     public static void main(String[] args) {
         /*
         *
