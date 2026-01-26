@@ -39,7 +39,7 @@ public class Book {
     }
 
     public void setIsbn(String isbn){
-        if (isbn.length() == 13){
+        if (isbn.length() == 13 && isbn.matches("ISBN\\d+")){
             this.isbn = isbn;
         } else {
             this.isbn = "Not a valid ISBN number";

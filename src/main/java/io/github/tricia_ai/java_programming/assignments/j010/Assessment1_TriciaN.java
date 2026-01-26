@@ -83,7 +83,7 @@ public class Assessment1_TriciaN {
         4. What is the purpose of the @Override annotation?
         * Indicates the intention of changing or altering the functioning of an inherited method
         5. How does encapsulation improve code maintainability?
-        * It enables restriction of private fields thus maintaing integrity
+        * It enables restriction of private fields thus maintaining integrity
         *
         *
         *

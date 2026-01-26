@@ -22,7 +22,7 @@ public class SavingsAccount extends BankAccount{
 
     @Override
     public int withdraw(int amount){
-        if (amount < getBalance() && getBalance() > 100){
+        if (amount < getBalance() && getBalance() - amount >= 100){
             balance = getBalance() - amount;
             savingsBalance = getSavingsBalance() + amount;
             System.out.println("The new savings balance is: "+savingsBalance);
@@ -37,7 +37,7 @@ public class SavingsAccount extends BankAccount{
 
     public int savingsInterest(int rate){
         if (savingsBalance > 0){
-            int totalInterestPerYear = (getSavingsBalance() * (rate/100)) + getSavingsBalance();
+            int totalInterestPerYear = getSavingsBalance() * rate/100 + getSavingsBalance();
             System.out.println("The new balance after the yearly interest: ");
             return totalInterestPerYear;
         } else {
